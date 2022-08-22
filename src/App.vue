@@ -1,10 +1,19 @@
 <template>
   <div id="app">
-    <div v-for="(poke,index) in pokemons" :key="index">
+    
+    <div class="column is-half is-offset-one-quarter">
+      <img src="./assets/logo.png"> <!--Para adicionar uma imagem-->
+
+      <h4 class="is-size-1">Pokedex</h4>
+      
+      <!--Para mostrar todos os pokemons na pagina através dos laços do array pokemons-->
+      <div v-for="(poke,index) in pokemons" :key="index">
 
       <!--Componente importada e a configuração de exibição das variaveis (name,url e num) conforme o v-for com todos os pokemons do array-->
       <Pokemon :name="poke.name" :url="poke.url" :num="index + 1"/>
     </div>
+    </div>
+    
   </div>
 </template>
 
