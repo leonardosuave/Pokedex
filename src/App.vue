@@ -1,6 +1,8 @@
 <template>
   <div id="app">
     <div v-for="(poke,index) in pokemons" :key="index">
+
+      <!--Componente importada e a configuração de exibição das variaveis (name,url e num) conforme o v-for com todos os pokemons do array-->
       <Pokemon :name="poke.name" :url="poke.url" :num="index + 1"/>
     </div>
   </div>
